@@ -16,14 +16,12 @@ use App\Http\Controllers\BlogCategoryController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('about');
-// });
-
 // User Routing
 Route::get("/", [PageController::class, "index"]);
 Route::get("/about", [PageController::class, "about"]);
 Route::get("/blog", [PageController::class, "blog"]);
+Route::get("/contact", [PageController::class, "contact"]);
+Route::get("/portfolio", [PageController::class, "portfolio"]);
 
 
 //Admin Routing

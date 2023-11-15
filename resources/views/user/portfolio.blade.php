@@ -29,7 +29,7 @@
     </svg>
 
   </section><!-- End Hero -->
-  <div>
-    here
-  </div>
+
+  <div>here</div>
+
 @endsection

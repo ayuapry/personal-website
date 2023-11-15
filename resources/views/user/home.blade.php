@@ -111,8 +111,7 @@
       <div class="container mb-4">
 
         <div class="section-title" data-aos="zoom-out">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2 class="title-left">Contact Me</h2>
         </div>
 
         <div class="row mt-5">
@@ -122,21 +121,20 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>Cibinong, Bogor, Jawa Barat</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>ayuapriyanti0304@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>+62 869 2250 9734</p>
               </div>
-
             </div>
 
           </div>
