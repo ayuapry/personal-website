@@ -5,9 +5,9 @@
       <h1 class="logo"><a href="{{ url('/') }}">AyuApry</a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/about') }}">About</a></li>
+          <li><a class="nav-link scrollto" href="{{ url('/blog') }}">Blog</a></li>
           <li><a class="nav-link scrollto " href="#portofolios">Protofolios</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
