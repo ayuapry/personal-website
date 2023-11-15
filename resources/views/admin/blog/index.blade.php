@@ -1,8 +1,7 @@
 @extends('admin.adminLayout.app')
-
 @section('title', 'Blog')
-
 @section('content')
+
 <div class="pagetitle">
     <h1>Data Blog</h1>
     <nav>

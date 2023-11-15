@@ -6,7 +6,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="{{ url('/') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('/about') }}">About</a></li>
+          {{-- <li><a class="nav-link scrollto" href="{{ url('/about') }}">About</a></li> --}}
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/blog') }}">Blog</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/portfolio')}}">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/contact')}}">Contact</a></li>

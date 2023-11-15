@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,11 @@ Route::prefix('admin')->group(
         Route::get("/blogcategory/{id}/delete", [BlogCategoryController::class, "destroy"]);
 
         //blog
+        Route::get("/blog", [BlogController::class, "index"]);
+        Route::get("/blog/add", [BlogController::class, "create"]);
+        Route::post("/blog", [BlogController::class, "store"]);
+        Route::get("/blog/{id}/edit", [BlogController::class, "show"]);
+        Route::put("/blog/{id}", [BlogController::class, "update"]);
+        Route::get("/blog/{id}/delete", [BlogController::class, "destroy"]);
     }
 );
