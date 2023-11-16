@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('user.home');
+        $blogs = Blog::with("blogcategory")->get();
+        return view('user.home', ['blogs' => $blogs]);
     }
 
     public function about()
@@ -18,7 +20,8 @@ class PageController extends Controller
 
     public function blog()
     {
-        return view("user.blog");
+        $blogs = Blog::with("blogcategory")->get();
+        return view('user.blog', ['blogs' => $blogs]);
     }
 
     public function contact()

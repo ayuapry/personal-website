@@ -39,13 +39,13 @@ class BlogController extends Controller
             "blogcategory_id" => "required"
         ]);
 
-        $saveImage['image'] = Storage::putFile('public/image', $$request->file('image'));
+        $saveImage['image'] = Storage::putFile('public/image', $request->file('image'));
 
         Blog::create([
+            "image" =>  $saveImage["image"],
             "title" => $validated["title"],
             "description" => $validated["description"],
-            "blogcategory_id" => $validated["blogcategory_id"],
-            "image" =>  $saveImage["image"]
+            "blogcategory_id" => $validated["blogcategory_id"]
         ]);
 
         return redirect('/admin/blog');
@@ -58,7 +58,7 @@ class BlogController extends Controller
     {
         $blog = Blog::with('blogcategory')->findOrFail($id);
         $blog_categories = BlogCategory::all();
-        return view('admin.portfolio.edit', ['blog' => $blog, 'blog_categories' => $blog_categories]);
+        return view('admin.blog.edit', ['blog' => $blog, 'blog_categories' => $blog_categories]);
     }
 
     /**
@@ -76,10 +76,10 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $validated = $request->validate([
-            'image' => 'mimes:jpg,jpeg,png|max:5120',
             'title' => 'string',
             'description' => 'string',
-            'blogcategory_id' => ''
+            'blogcategory_id' => '',
+            'image' => 'mimes:jpg,jpeg,png|max:5120'
         ]);
 
         if ($request->hasFile('image')) {
