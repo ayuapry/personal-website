@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Portfolio;
+use App\Models\PortoCategory;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -36,8 +38,16 @@ class PageController extends Controller
         $portfolios = Portfolio::with("portocategory")->get();
         return view("user.portfolio", ["portfolios" => $portfolios]);
     }
+    public function portfolioDetail($id)
+    {
+        $portfolio = Portfolio::with("portocategory")->findOrFail($id);
+        return view('user.portfolioDetail', ['portfolio' => $portfolio]);
+    }
     public function adminDashboard()
     {
-        return view("admin.dashboard");
+        $blogcount = Blog::count();
+        $portfoliocount = Portfolio::count();
+        $blogcategorycount = BlogCategory::count();
+        return view("admin.dashboard", ["blogs" => $blogcount, "portfolios" => $portfoliocount, "blogcategory" => $blogcategorycount]);
     }
 }

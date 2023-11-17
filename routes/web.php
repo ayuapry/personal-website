@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PortoCategoryController;
 use App\Http\Controllers\PortoController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,10 +24,15 @@ Route::get("/about", [PageController::class, "about"]);
 Route::get("/blog", [PageController::class, "blog"]);
 Route::get("/contact", [PageController::class, "contact"]);
 Route::get("/portfolio", [PageController::class, "portfolio"]);
+Route::get('/portfolio/{id}', [PageController::class, 'portfolioDetail'])->name('portfolio.portfolioDetail');
 
+// AUTH
+Route::get("/login", [AuthController::class, "login"])->name('login');
+Route::post('/login', [AuthController::class, 'doLogin']);
+Route::get('/logout', [AuthController::class, 'logout']);
 
 //Admin Routing
-Route::prefix('admin')->group(
+Route::prefix('admin')->middleware(['auth:web'])->group(
     function () {
         Route::get("/dashboard", [PageController::class, "adminDashboard"]);
 

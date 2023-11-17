@@ -39,9 +39,9 @@
                             <div class="row mb-3">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">description</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control @error('description') is-invalid @enderror" style="height: 100px" name="description"></textarea>
+                                    <textarea class="form-control @error('content') is-invalid @enderror" style="height: 100px" name="content"></textarea>
                                 </div>
-                                @error('description')
+                                @error('content')
                                     <div class="invalid-feedback">
                                         description tidak boleh kosong
                                     </div>

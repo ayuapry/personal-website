@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('image');
             $table->string('title');
-            $table->text('description');
+            $table->text('content');
             $table->foreignId('blogcategory_id');
             $table->foreign('blogcategory_id')->references('id')->on('blog_categories')->onDelete('cascade');
             $table->timestamps();

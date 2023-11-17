@@ -35,7 +35,7 @@ class BlogController extends Controller
         $validated = $request->validate([
             "image" => "required|image|mimes:jpg,jpeg,png|max:2048",
             "title" => "required|min:5",
-            "description" => "required|min:10",
+            "content" => "required|min:10",
             "blogcategory_id" => "required"
         ]);
 
@@ -44,7 +44,7 @@ class BlogController extends Controller
         Blog::create([
             "image" =>  $saveImage["image"],
             "title" => $validated["title"],
-            "description" => $validated["description"],
+            "content" => $validated["content"],
             "blogcategory_id" => $validated["blogcategory_id"]
         ]);
 
@@ -77,7 +77,7 @@ class BlogController extends Controller
         $blog = Blog::findOrFail($id);
         $validated = $request->validate([
             'title' => 'string',
-            'description' => 'string',
+            'content' => 'string',
             'blogcategory_id' => '',
             'image' => 'mimes:jpg,jpeg,png|max:5120'
         ]);
@@ -91,7 +91,7 @@ class BlogController extends Controller
 
         Blog::where('id', $id)->update([
             "title" => $validated["title"],
-            "description" => $validated["description"],
+            "content" => $validated["content"],
             "blogcategory_id" => $validated["blogcategory_id"],
             'image' => $newImage['image']
         ]);

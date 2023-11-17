@@ -255,7 +255,7 @@
                 Portfolio
               </h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Crafting Digital Experiences, One Line of Code at a Time: Where Innovation Meets Imagination in My Portfolio.
               </p>
               <div class="line-mf"></div>
             </div>
@@ -281,10 +281,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <div class="w-like">
-                                            <a href="portfolio/{{ $portfolio->id }}"> <span
-                                                    class="bi bi-plus-circle"></span></a>
-                                        </div>
+                                      <a href="{{ route('portfolio.portfolioDetail', ['id' => $portfolio->id]) }}">Know More <span class="bi bi-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>

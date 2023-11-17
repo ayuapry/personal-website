@@ -7,7 +7,7 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Portfolio</h2>
-          <p class="animate__animated fanimate__adeInUp">Explore more with my portfolio!</p>
+          <p class="animate__animated fanimate__adeInUp">Crafting Digital Experiences, One Line of Code at a Time: Where Innovation Meets Imagination in My Portfolio!</p>
           <a href="#portfolio" class="btn-get-started animate__animated animate__fadeInUp scrollto">Know More</a>
         </div>
       </div>
@@ -31,21 +31,8 @@
   </section><!-- End Hero -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
+    <section id="portfolio" class="portfolio-mf sect-pt4 route">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="title-box text-center">
-                        <h3 class="title-a">
-                            Portfolio
-                        </h3>
-                        <p class="subtitle-a">
-                            Project yang pernah saya kerjakan
-                        </p>
-                        <div class="line-mf"></div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 @foreach ($portfolios as $portfolio)
                     <div class="col-md-4">
@@ -66,10 +53,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <div class="w-like">
-                                            <a href="portfolio/{{ $portfolio->id }}"> <span
-                                                    class="bi bi-plus-circle"></span></a>
-                                        </div>
+                                        <a href="portfolio/{{ $portfolio->id }}">Know More <span class="bi bi-arrow-right"></span></div>
                                     </div>
                                 </div>
                             </div>
