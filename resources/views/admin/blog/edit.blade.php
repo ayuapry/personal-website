@@ -41,26 +41,14 @@
                             <div class="row mb-3">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Deskripsi Singkat</label>
                                 <div class="col-sm-10">
-                                    <textarea class="form-control @error('description') is-invalid @enderror" style="height: 100px" name="description">{{ $blog->description }}</textarea>
+                                    <textarea class="form-control @error('content') is-invalid @enderror" style="height: 100px" name="content">{{ $blog->content }}</textarea>
                                 </div>
-                                @error('description')
+                                @error('content')
                                     <div class="invalid-feedback">
                                         Deskripsi tidak boleh kosong
                                     </div>
                                 @enderror
                             </div>
-                            {{-- <div class="row mb-3">
-                                <label for="inputDate" class="col-sm-2 col-form-label">Tanggal</label>
-                                <div class="col-sm-10">
-                                    <input type="date" class="form-control @error('tanggal') is-invalid @enderror"
-                                        name="tanggal" value="{{ $blog->tanggal }}">
-                                </div>
-                                @error('tanggal')
-                                    <div class="invalid-feedback">
-                                        Tanggal tidak boleh kosong
-                                    </div>
-                                @enderror
-                            </div> --}}
                             <div class="row mb-3">
                                 <label for="inputNumber" class="col-sm-2 col-form-label">Gambar blog</label>
                                 <div class="col-sm-10">
@@ -92,4 +80,10 @@
             </div>
         </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('content');
+    </script>
 @endsection

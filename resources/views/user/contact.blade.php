@@ -7,8 +7,8 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Hi, I am AyuApry</h2>
-          <p class="animate__animated fanimate__adeInUp">A passionate frontend developer with a penchant for crafting captivating digital experiences. 🎨✨ Whether you're here to explore my portfolio, dive into my coding adventures, or just to say hello, you've come to the right place! </p>
-          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Know More</a>
+          <p class="animate__animated fanimate__adeInUp">Connecting Beyond Clicks: Your Gateway to Reach Us</p>
+          <a href="#contact" class="btn-get-started animate__animated animate__fadeInUp scrollto">Know More</a>
         </div>
       </div>
     </div>

@@ -25,6 +25,7 @@ Route::get("/blog", [PageController::class, "blog"]);
 Route::get("/contact", [PageController::class, "contact"]);
 Route::get("/portfolio", [PageController::class, "portfolio"]);
 Route::get('/portfolio/{id}', [PageController::class, 'portfolioDetail'])->name('portfolio.portfolioDetail');
+Route::get('/blog/{id}', [PageController::class, 'blogDetail'])->name('blog.blogDetail');
 
 // AUTH
 Route::get("/login", [AuthController::class, "login"])->name('login');

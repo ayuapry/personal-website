@@ -27,7 +27,11 @@ class PageController extends Controller
         $blogs = Blog::with("blogcategory")->get();
         return view('user.blog', ['blogs' => $blogs]);
     }
-
+    public function blogDetail($id)
+    {
+        $blog = Blog::with("blogcategory")->findOrFail($id);
+        return view('user.blogDetail', ['blog' => $blog]);
+    }
     public function contact()
     {
         return view("user.contact");
