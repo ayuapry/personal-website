@@ -32,12 +32,12 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="/admin/porto">
+                    <a href="/admin/portfolio">
                         <i class="bi bi-circle-fill"></i><span>Daftar Porto</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/admin/porto/add">
+                    <a href="/admin/portfolio/add">
                         <i class="bi bi-circle-fill"></i><span>Tambah Porto</span>
                     </a>
                 </li>

@@ -1,5 +1,5 @@
 @extends('user.layouts.app')
-@section('title', 'Blogs')
+@section('title', 'Portfolio')
 @section('content')
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-end align-items-center">

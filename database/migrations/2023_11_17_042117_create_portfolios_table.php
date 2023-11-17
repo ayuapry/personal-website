@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
+            $table->string('content_title');
+            $table->string('content');
+            $table->string('image');
+            $table->date('tanggal');
+            $table->string('url');
+            $table->foreignId('portocategory_id');
+            $table->foreign('portocategory_id')->references('id')->on('porto_categories')->onDelete('cascade');
             $table->timestamps();
         });
     }
