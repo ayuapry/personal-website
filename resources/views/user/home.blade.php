@@ -223,27 +223,13 @@
                     </div>
                 @endforeach
             </div>
+          <div class="container d-flex justify-content-center align-items-center mb-5">
+            <!-- Button to link to another page -->
+            <a href="/blog" class="btn btn-primary button-rouded button">See More Blog</a>
+          </div>
         </div>
     </section>
     <!-- End Blog Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="row" data-aos="zoom-out">
-          <div class="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="work" class="portfolio-mf sect-pt4 route">
@@ -281,7 +267,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                      <a href="{{ route('portfolio.portfolioDetail', ['id' => $portfolio->id]) }}">Know More <span class="bi bi-arrow-right"></span></a>
+                                      <a href="{{ route('portfolio.portfolioDetail', ['id' => $portfolio->id]) }}">See Details <span class="bi bi-arrow-right"></span></a>
                                     </div>
                                 </div>
                             </div>
@@ -289,9 +275,31 @@
                     </div>
                 @endforeach
             </div>
+            <div class="container d-flex justify-content-center align-items-center mb-5">
+            <!-- Button to link to another page -->
+            <a href="/portfolio" class="btn btn-primary button-rouded button">See More Portfolio</a>
+          </div>
       </div>
     </section>
     <!-- End Portfolio Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>Call To Action</h3>
+            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Cta Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">

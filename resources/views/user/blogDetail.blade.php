@@ -71,21 +71,11 @@
               <h5 class="sidebar-title">Recent Post</h5>
               <div class="sidebar-content">
                 <ul class="list-sidebar">
-                  <li>
-                    <a href="#">Atque placeat maiores.</a>
-                  </li>
-                  <li>
-                    <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
-                  <li>
-                    <a href="#">Atque placeat maiores nam quo autem</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
+                  @foreach ($blogs as $item)
+                      <li>
+                        <a href="/blog/{{ $item->id }}">{{ $item->title }}</a>
+                      </li>
+                  @endforeach
                 </ul>
               </div>
             </div>
@@ -93,24 +83,9 @@
               <h5 class="sidebar-title">Tags</h5>
               <div class="sidebar-content">
                 <ul>
-                  <li>
-                    <a href="#">Web.</a>
-                  </li>
-                  <li>
-                    <a href="#">Design.</a>
-                  </li>
-                  <li>
-                    <a href="#">Travel.</a>
-                  </li>
-                  <li>
-                    <a href="#">Photoshop</a>
-                  </li>
-                  <li>
-                    <a href="#">Corel Draw</a>
-                  </li>
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
+                  @foreach ($blogcategories as $blogcategory)
+                    <p class="btn btn-sm btn-primary">{{ $blogcategory->name }}</p>
+                  @endforeach
                 </ul>
               </div>
             </div>

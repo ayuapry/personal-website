@@ -35,19 +35,6 @@
     <section id="blog" class="blog-mf sect-pt4 route">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="title-box text-center">
-                        <h3 class="title-a">
-                            Blog
-                        </h3>
-                        <p class="subtitle-a">
-                          Unveiling Tomorrow's Digital Canvas: Where Innovation Meets Frontend Excellence
-                        </p>
-                        <div class="line-mf"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 @foreach ($blogs as $blog)
                     <div class="col-md-4">
                         <div class="card card-blog">
@@ -61,7 +48,7 @@
                                         <h6 class="category">{{ $blog->blogcategory->name }}</h6>
                                     </div>
                                 </div>
-                                <h3 class="card-title"><a href="blog-single.html">{{ $blog->title }}</a></h3>
+                                <h3 class="card-title"><a href="{{ route('blog.blogDetail', ['id' => $blog->id]) }}">{{ $blog->title }}</a></h3>
                                 <p class="card-description">
                                     {!! $blog->description !!}
                                 </p>

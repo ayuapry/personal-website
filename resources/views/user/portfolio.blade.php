@@ -29,40 +29,39 @@
     </svg>
 
   </section><!-- End Hero -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio-mf sect-pt4 route">
-        <div class="container">
-            <div class="row">
-                @foreach ($portfolios as $portfolio)
-                    <div class="col-md-4">
-                        <div class="work-box">
-                            <a href="{{ Storage::url($portfolio->image) }}" data-gallery="portfolioGallery"
-                                class="portfolio-lightbox">
-                                <div class="work-img">
-                                    <img src="{{ Storage::url($portfolio->image) }}" alt="" class="img-fluid gambar">
-                                </div>
-                            </a>
-                            <div class="work-content">
-                                <div class="row">
-                                    <div class="col-sm-8">
-                                        <h2 class="w-title">{{ $portfolio->content_title }}</h2>
-                                        <div class="w-more">
-                                            <span class="w-ctegory">{{ $portfolio->portocategory->name }}</span> / <span
-                                                class="w-date">{{ $portfolio->tanggal }}</span>
-                                        </div>
+      <!-- ======= Portfolio Section ======= -->
+        <section id="work" class="portfolio-mf sect-pt4 route">
+            <div class="container">
+                <div class="row">
+                    @foreach ($portfolios as $portfolio)
+                        <div class="col-md-4">
+                            <div class="work-box">
+                                <a href="{{ Storage::url($portfolio->image) }}" data-gallery="portfolioGallery"
+                                    class="portfolio-lightbox">
+                                    <div class="work-img">
+                                        <img src="{{ Storage::url($portfolio->image) }}" alt=""
+                                            class="img-fluid gambar">
                                     </div>
-                                    <div class="col-sm-4">
-                                        <a href="portfolio/{{ $portfolio->id }}">Know More <span class="bi bi-arrow-right"></span></div>
+                                </a>
+                                <div class="work-content">
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <h2 class="w-title">{{ $portfolio->content_title }}</h2>
+                                            <div class="w-more">
+                                                <span class="w-ctegory">{{ $portfolio->portocategory->name }}</span> / <span
+                                                    class="w-date">{{ $portfolio->tanggal }}</span>
+                                            </div>
+                                        </div>
+                                         <div class="col-sm-4">
+                                      <a href="{{ route('portfolio.portfolioDetail', ['id' => $portfolio->id]) }}">See Details <span class="bi bi-arrow-right"></span></a>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- End Portfolio Section -->
-
+        </section>
+        <!-- End Portfolio Section -->
 @endsection
